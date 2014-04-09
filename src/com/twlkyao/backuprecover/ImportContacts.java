@@ -1,4 +1,4 @@
-package com.twlkyao.sms_contacts;
+package com.twlkyao.backuprecover;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ import java.util.List;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import com.twlkyao.utils.ConstVariables;
+import com.twlkyao.utils.ConstantVariables;
 import com.twlkyao.utils.ContactsField;
 import com.twlkyao.utils.ContactsItem;
 import com.twlkyao.utils.LogUtils;
@@ -75,12 +75,12 @@ public class ImportContacts {
 		XmlPullParser xmlPullParser = Xml.newPullParser(); // Create a new xml pull parser.
 		
 		// Construct the full file path of the backup contacts file.
-		String absolutePath = Environment.getExternalStorageDirectory() + ConstVariables.smsBackupLocation + ConstVariables.smsFile;
+		String absolutePath = Environment.getExternalStorageDirectory() + ConstantVariables.smsBackupLocation + ConstantVariables.smsFile;
 		File file = new File(absolutePath);
 		if (!file.exists()) {
 
 			Looper.prepare(); // Show a Toast message in the thread.
-			Toast.makeText(context, "通讯录备份文件" + ConstVariables.contactsFile + "不在sd卡中",
+			Toast.makeText(context, "通讯录备份文件" + ConstantVariables.contactsFile + "不在sd卡中",
 					Toast.LENGTH_SHORT).show();
 			Looper.loop();//退出线程
 //			return null;

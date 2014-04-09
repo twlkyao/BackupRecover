@@ -1,4 +1,4 @@
-package com.twlkyao.sms_contacts;
+package com.twlkyao.backuprecover;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				ExportSmsXml exportSmsXml = new ExportSmsXml(getApplicationContext());
+				ExportSms exportSmsXml = new ExportSms(getApplicationContext());
 				try {
 					exportSmsXml.createXml();
 				} catch (Exception e) {
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				ExportContactsXml exportContactsXml = new ExportContactsXml(getApplicationContext());
+				ExportContacts exportContactsXml = new ExportContacts(getApplicationContext());
 				try {
 					exportContactsXml.createXml();
 				} catch (Exception e) {

@@ -1,10 +1,10 @@
-package com.twlkyao.sms_contacts;
+package com.twlkyao.backuprecover;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import org.xmlpull.v1.XmlSerializer;
 
-import com.twlkyao.utils.ConstVariables;
+import com.twlkyao.utils.ConstantVariables;
 import com.twlkyao.utils.LogUtils;
 import com.twlkyao.utils.SmsField;
 
@@ -17,7 +17,7 @@ import android.os.Environment;
 import android.util.Xml;
 import android.widget.Toast;
 
-public class ExportSmsXml {
+public class ExportSms {
 	
 	private boolean debug = true;
 	private String Tag = "ExportSmsXml";
@@ -28,7 +28,7 @@ public class ExportSmsXml {
 	private FileOutputStream outStream = null;
 	private XmlSerializer serializer; // XmlSerializer.
 
-	public ExportSmsXml(Context context) {
+	public ExportSms(Context context) {
 		this.context = context;
 	}
 
@@ -38,7 +38,7 @@ public class ExportSmsXml {
 	public void xmlStart() {
 
 		// Construct the file path to store the sms xml file.
-		String path = Environment.getExternalStorageDirectory().getPath() + ConstVariables.smsBackupLocation;
+		String path = Environment.getExternalStorageDirectory().getPath() + ConstantVariables.smsBackupLocation;
 		
 		logUtils.d(Tag, "path:" + path);
 
@@ -49,7 +49,7 @@ public class ExportSmsXml {
 		}
 		
 		// Create the sms xml file.
-		File file = new File(path, ConstVariables.smsFile);
+		File file = new File(path, ConstantVariables.smsFile);
 		try {
 			outStream = new FileOutputStream(file);
 			serializer = Xml.newSerializer();

@@ -1,6 +1,6 @@
 package com.twlkyao.utils;
 
-public class ConstVariables {
+public class ConstantVariables {
 	public static String smsBackupLocation = "/SMSBackup/";
 	public static String contactsBackupLocation = "/ContactsBackup/";
 	public static String smsFile = "sms.xml";
