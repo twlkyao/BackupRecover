@@ -74,8 +74,8 @@ public class ImportSms {
 				conResolver.insert(Uri.parse("content://sms"), values);
 			}
 			cursor.close();
-			Toast.makeText(context, "短信恢复成功！", Toast.LENGTH_SHORT).show();
 		}
+		Toast.makeText(context, "短信恢复成功！", Toast.LENGTH_SHORT).show();
 	}
 
 //	public void delete() {
