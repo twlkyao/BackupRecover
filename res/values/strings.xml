@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BackupRecover</string>
+    <string name="action_settings">设置</string>
+    <string name="sms_textview">短信操作</string>
+    <string name="backup_sms">备份</string>
+    <string name="recover_sms">恢复</string>
+    <string name="contacts_textview">联系人操作</string>
+    <string name="backup_contacts">备份</string>
+    <string name="recover_contacts">恢复</string>
+
+</resources>

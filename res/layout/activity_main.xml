@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00aa55"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <!-- Sms operation. -->
+
+    <TextView
+        android:id="@+id/sms_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/sms_textview"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/backupSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sms_textview"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/backup_sms"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/recoverSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/backupSms"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@id/backupSms"
+        android:text="@string/recover_sms"
+        android:textColor="@android:color/black" />
+    <!-- Contacts operation. -->
+
+    <TextView
+        android:id="@+id/contactsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/sms_textview"
+        android:layout_below="@id/backupSms"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/contacts_textview"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/backupContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contactsTextView"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/backup_contacts"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/recoverContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/backupContacts"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/backupContacts"
+        android:text="@string/recover_contacts"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>
